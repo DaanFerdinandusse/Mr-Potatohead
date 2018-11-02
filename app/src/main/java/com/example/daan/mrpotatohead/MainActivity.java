@@ -151,7 +151,30 @@ public class MainActivity extends AppCompatActivity {
         Log.d("potato", "checkClicked: ");
         CheckBox checkbox = (CheckBox) v;
         String name = checkbox.getText().toString();
-        ImageView image = (ImageView) findViewById(R.id.arms);
+        ImageView image = (ImageView) findViewById(R.id.hat);;
+        switch (name){
+            case "Hat": image = (ImageView) findViewById(R.id.hat);
+                        break;
+            case "Eyebrows": image = (ImageView) findViewById(R.id.eyebrows);
+                break;
+            case "Nose": image = (ImageView) findViewById(R.id.nose);
+                break;
+            case "Mustage": image = (ImageView) findViewById(R.id.mustage);
+                break;
+            case "Arms": image = (ImageView) findViewById(R.id.arms);
+                break;
+            case "Eyes": image = (ImageView) findViewById(R.id.eyes);
+                break;
+            case "Glasses": image = (ImageView) findViewById(R.id.glasses);
+                break;
+            case "Mouth": image = (ImageView) findViewById(R.id.mouth);
+                break;
+            case "Ears": image = (ImageView) findViewById(R.id.ears);
+                break;
+            case "Shoes": image = (ImageView) findViewById(R.id.shoes);
+                break;
+        }
+        /*
         if (name.equals("Hat")){
             image = (ImageView) findViewById(R.id.hat);
         } else if (name.equals("Eyebrows")) {
@@ -173,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (name.equals("Shoes")) {
             image = (ImageView) findViewById(R.id.shoes);
         }
-
+        */
         if (checkbox.isChecked()){
             image.setVisibility(View.VISIBLE);
         } else {
